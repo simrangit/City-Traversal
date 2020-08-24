@@ -9,7 +9,9 @@ The following are the steps I followed to create the described situation (the in
 2. Following the first step, for every city:
 
    a. For every city, Euclidean distance to every other city (25) was calculated using the coordinates of the Places dictionary which was created in the first step.
+   
    b. A temporary dictionary was created with key as distances and value as cities and was sorted. Sorted dictionary was randomized in the range of 1-4.
+   
    c. Following the (b) step, for every city, the randomized cities of first five sorted distances were added to the Big Dict with key as cities and value as distances.
 
 This then created a nested dictionary which contains for every city, the key as cities – to which each city is connected to and the values as distances – a distance to each city for a particular city.
