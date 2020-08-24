@@ -1,0 +1,22 @@
+State space - the set of all states reachable from the initial state by any sequence of actions. The state space forms a directed network or graph in which the nodes are states and the links between nodes are actions.
+A path in the state space is a sequence of states connected by a sequence of actions. In my assignment, the state space is the set of all states which are connected from a particular city in ‘A’ – ‘Z’.
+
+Start State – The start city is randomly chosen by the program in each of the searches. For every instance of the search, every time a start state – city is chosen randomly from ‘A’ – ‘Z’.
+
+Simple code snippet of randomly choosing start city:
+
+list1 = list(BigDict.keys())
+print(list1)
+start_city = random.choice(list1)
+
+Goal State – The goal state is also randomly chosen by the program in each of the searched. For every instance of the search, every time a goal state – city is chosen randomly from ‘A’-‘Z’, excluding the one which is already chosen as the start state.
+
+Simple code snippet of randomly choosing goal city:
+
+list1 = list(BigDict.keys())
+print(list1)
+end_city = random.choice(list1)
+
+Successor Function – This is needed to move between different states. In simple words, the function defines a description of possible actions, a set of cities (it can move forward to reach the resulting destination). In my assignment, a successor function defines a relation of accessibility among states.
+
+For example, this is a set of action-state pairs. In nested dictionary, each city has a random successor function of 1-4 cities, which it is connected to.
